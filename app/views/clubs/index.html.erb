@@ -1,0 +1,26 @@
+
+
+
+ <div class="container">
+  <table class="table">
+   <h3> Liste des adhérents au club </h3>
+<% @users.each do |user| %>
+      <tr>
+        <th>prenom</th>
+        <th>Nom</th>
+        <th>email</th>
+      </tr>
+    
+        <tr>
+          <td><%= user.name%></td>
+          <td><%= user.surname%></td>
+          <td><%= user.email%></td>
+          
+          
+        </tr>
+        </div>
+
+  <%end%>
+  </table> </div>
+   <h3>Pour rejoindre le club, <%= link_to "Inscris-toi !", new_user_registration_path, class: "btn btn-lg btn-primary" %></h3>
+

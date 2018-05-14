@@ -1,0 +1,43 @@
+
+<% if %>
+  <% user_signed_in? %>
+
+<div class="center jumbotron">
+<div class="container">
+
+
+ 
+     <h1> <%= "Bienvenue " + current_user.name + " !"%></h1><br><br>
+  
+
+   
+      <%= link_to "Rejoins le club", clubs_path, class: "btn btn-lg btn-primary" %>
+     
+  
+      <%= link_to "Déconnecte-toi", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-primary" %>
+ 
+
+  
+     <%= link_to "Modifie ton compte", edit_user_registration_path, class: "btn btn-lg btn-primary" %> 
+
+
+
+<% else %>
+
+<div class="center jumbotron">
+<div class="container">
+<h1> Hello! Pour accéder au club</h1><br>
+<%= link_to "Créé ton compte", new_user_registration_path, class: "btn btn-lg btn-primary" %> 
+
+  
+     OU
+  
+
+  
+    <%= link_to "Connecte-toi", new_user_session_path, class: "btn btn-lg btn-primary" %> 
+  
+
+    <% end %>
+
+</div></div>
+
