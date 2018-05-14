@@ -7,18 +7,18 @@ class UserTest < ActiveSupport::TestCase
     @user = User.new(name: "Tom", surname: "ghighi", email: "test@example.fr")
   end
 
-  test "should be valid" do
+  test "user should be valid" do
     assert_not @user.valid?
   end
 
 
  test "name should be present" do
-    @user.name = "     "
+    @user.name = "Lola"
     assert_not @user.valid?
   end
 
    test "email should be present" do
-    @user.email = "     "
+    @user.email = "bla@bla.com"
     assert_not @user.valid?
   end
 
@@ -26,4 +26,5 @@ class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+
 end

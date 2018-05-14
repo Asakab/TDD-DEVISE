@@ -1,0 +1,26 @@
+
+<div class="center jumbotron">
+<div class="container">
+
+ <div class="container">
+  <table class="table">
+   <h3> Voici ton profil</h3>
+
+      <tr>
+        <th>prenom</th>
+        <th>Nom</th>
+        <th>email</th>
+      </tr>
+    
+        <tr>
+          <td><%= current_user.name%></td>
+          <td><%= current_user.surname%></td>
+          <td><%= current_user.email%></td>
+          <td><%= link_to "Modifie ton profil",edit_user_registration_path %></td>
+          <%= link_to "Retour à la liste", clubs_path, class: "btn btn-lg btn-primary" %>
+          
+          
+        </tr>
+        </div>
+
+

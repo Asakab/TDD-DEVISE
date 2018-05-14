@@ -7,7 +7,8 @@
 
  <div class="container">
   <table class="table">
-   <h3> Liste des adhérents au club </h3>
+  <h2> Bienvenue au club des galériens des TDD</h2>
+   <h3> Liste des adhérents</h3>
 <% @users.each do |user| %>
       <tr>
         <th>prenom</th>
@@ -19,10 +20,12 @@
           <td><%= user.name%></td>
           <td><%= user.surname%></td>
           <td><%= user.email%></td>
+
           
           
         </tr>
         </div>
+
 
   <%end%>
   </table> </div>
@@ -35,3 +38,5 @@
 tu <%= link_to "t'inscris!", new_user_registration_path, class: "btn btn-lg btn-primary" %> ou que tu  <%= link_to "te connectes", new_user_session_path, class: "btn btn-lg btn-primary" %>.</h2></div></div></div></div>
 
   <%end%>
+
+  <%= link_to "Accéder à mon profil", profil_path, class: "btn btn-lg btn-primary" %>
