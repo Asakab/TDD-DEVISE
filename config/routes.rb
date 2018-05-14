@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :clubs
+  
   #get 'clubs/index'
   devise_for :users
   root 'home#index'

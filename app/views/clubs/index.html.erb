@@ -1,5 +1,9 @@
 
+<% if %>
+  <% user_signed_in? %>
 
+<div class="center jumbotron">
+<div class="container">
 
  <div class="container">
   <table class="table">
@@ -22,5 +26,12 @@
 
   <%end%>
   </table> </div>
-   <h3>Pour rejoindre le club, <%= link_to "Inscris-toi !", new_user_registration_path, class: "btn btn-lg btn-primary" %></h3>
 
+  <% else %>
+
+<div class="center jumbotron">
+<div class="container">
+<h2> Bien tenté ! Mais tu ne peux accéder à la liste que si<br><br>
+tu <%= link_to "t'inscris!", new_user_registration_path, class: "btn btn-lg btn-primary" %> ou que tu  <%= link_to "Créés ton compte", new_user_registration_path, class: "btn btn-lg btn-primary" %> </h2></div></div></div></div>
+
+  <%end%>
