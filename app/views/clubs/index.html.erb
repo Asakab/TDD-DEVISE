@@ -29,6 +29,7 @@
 
   <%end%>
   </table> </div>
+  <%= link_to "Accéder à mon profil", profil_path, class: "btn btn-lg btn-primary" %>
 
   <% else %>
 
@@ -39,4 +40,3 @@ tu <%= link_to "t'inscris!", new_user_registration_path, class: "btn btn-lg btn-
 
   <%end%>
 
-  <%= link_to "Accéder à mon profil", profil_path, class: "btn btn-lg btn-primary" %>
